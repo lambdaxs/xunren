@@ -91,7 +91,7 @@ limit | int | 是 | 一次获取的条数
   "id": 131223,
   "title": "我儿乔峰",
   "content": "今日于加州走失...",
-  "images": ["https://1.jpg","https://2.jpg"],
+  "image_list": ["https://1.jpg","https://2.jpg"],
   "create_at": 154324454455
 }]
 }
@@ -117,7 +117,7 @@ info_id | int64 | 是 | 信息流id
     "id": 131223,
     "title": "我儿乔峰",
     "content": "今日于加州走失...",
-    "images": ["https://1.jpg","https://2.jpg"],
+    "image_list": ["https://1.jpg","https://2.jpg"],
     "create_at": 154324454455
   },
   "msg": "success"
@@ -145,7 +145,7 @@ limit | int | 是 | 一次获取的条数
     "id": 131223,
     "title": "我儿乔峰",
     "content": "今日于加州走失...",
-    "images": ["https://1.jpg","https://2.jpg"],
+    "image_list": ["https://1.jpg","https://2.jpg"],
     "create_at": 154324454455
   }],
   "msg": "success"

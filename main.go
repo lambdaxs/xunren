@@ -173,6 +173,9 @@ func InfoList(c echo.Context) error {
     } else {
         DB.Where("id < ?", reqModel.InfoId).Order("id desc").Limit(reqModel.Limit).Find(&list)
     }
+    for i,item := range list {
+        list[i].ImageList = strings.Split(item.Images,",")
+    }
     return util.OutputData(c, 0, list, "")
 }
 
@@ -187,6 +190,7 @@ func InfoDetail(c echo.Context) error {
     }
     infoData := model.Info{}
     DB.Where("id = ?").First(&infoData)
+    infoData.ImageList = strings.Split(infoData.Images,",")
     return util.OutputData(c, 0, infoData, "")
 }
 
@@ -202,6 +206,9 @@ func MyInfoList(c echo.Context) error {
     }
     list := make([]model.Info, 0)
     DB.Where("uid = ?",reqModel.Uid).Order("id desc").Limit(reqModel.Limit).Find(&list)
+    for i,item := range list {
+        list[i].ImageList = strings.Split(item.Images,",")
+    }
     return util.OutputData(c, 0, list, "")
 }
 

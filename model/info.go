@@ -7,6 +7,7 @@ type Info struct {
     Content string `json:"content"`
     Images string `json:"image"`
     CreateAt int64 `json:"create_at"`
+    ImageList []string `json:"image_list" gorm:"-"`
 }
 
 func (i *Info)TableName() string {
