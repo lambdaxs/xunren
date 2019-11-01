@@ -84,6 +84,13 @@ func UserLogin(c echo.Context) error {
         return util.OutputError(c, 1, fmt.Errorf("请求参数错误:%s", err.Error()))
     }
 
+    if strings.TrimSpace(reqModel.Phone) == "" {
+        return util.OutputError(c, 1, fmt.Errorf("手机号不能为空"))
+    }
+    if strings.TrimSpace(reqModel.Code) == "" {
+        return util.OutputError(c, 1, fmt.Errorf("验证码不能为空"))
+    }
+
     //查询redis手机号验证码
     conn := Cache.Get()
     defer conn.Close()
