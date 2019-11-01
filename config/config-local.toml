@@ -1,0 +1,15 @@
+[server]
+    host = "127.0.0.1"
+    port = "8080"
+[mysql]
+    dsn = "root:123456@/xunren?charset=utf8&parseTime=True&loc=Local"
+[redis]
+    addr = "127.0.0.1:6379"
+    password = ""
+    db = 0
+[sms]
+    host =      "https://app.cloopen.com:8883"
+    sid =       "8aaf0708670aef8401670cd0f7820567"
+    auth_token = "227b7798396e42cebcb2c07f9f690002"
+    app_id =     "8aaf0708670aef8401670cd0f7df056d"
+    app_token =  "0276a86be9dbccbf98c521ed19f9466e"
