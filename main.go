@@ -37,6 +37,7 @@ func Init(cfg *config.Config) {
     Cache = util.NewRedisPool(cfg.Redis.Addr, cfg.Redis.Password, cfg.Redis.DB)
     fmt.Println("init redis success")
     SMSServer = util.NewSMSServer(cfg.SMS.HOST, cfg.SMS.Sid, cfg.SMS.AuthToken, cfg.SMS.AppID, cfg.SMS.AppToken)
+    fmt.Println(cfg.SMS.HOST,cfg.SMS.Sid, cfg.SMS.AuthToken, cfg.SMS.AppID, cfg.SMS.AppToken)
 }
 
 //短信登陆

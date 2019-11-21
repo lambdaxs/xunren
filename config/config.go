@@ -14,10 +14,10 @@ type Config struct {
         DB int
     }
     SMS struct{
-        HOST string
-        Sid string
-        AuthToken string
-        AppID string
-        AppToken string
+        HOST string `toml:"host"`
+        Sid string `toml:"sid"`
+        AuthToken string `toml:"auth_token"`
+        AppID string `toml:"app_id"`
+        AppToken string `toml:"app_token"`
     }
 }
